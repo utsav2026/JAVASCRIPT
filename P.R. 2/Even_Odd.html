@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even or Odd & Divisible by 5</title>
+</head>
+<body>
+
+<h2>Check Even/Odd and Divisible by 5</h2>
+
+<label>Enter any number:</label>
+<input type="number" id="num" placeholder="Enter number">
+<button onclick="checkNumber()">Check</button>
+
+<script>
+function checkNumber() {
+    let number = Number(document.getElementById("num").value);
+
+    if (!number && number !== 0) {
+        document.write("Please enter a valid number.");
+        console.log("Please enter a valid number.");
+        return;
+    }
+
+    // Even or Odd
+    if (number % 2 === 0) {
+        document.write(number + " is Even.<br>");
+        console.log(number + " is Even.");
+    } else {
+        document.write(number + " is Odd.<br>");
+        console.log(number + " is Odd.");
+    }
+
+    // Divisible by 5
+    if (number % 5 === 0) {
+        document.write(number + " is divisible by 5.");
+        console.log(number + " is divisible by 5.");
+    } else {
+        document.write(number + " is NOT divisible by 5.");
+        console.log(number + " is NOT divisible by 5.");
+    }
+}
+</script>
+
+</body>
+</html>
