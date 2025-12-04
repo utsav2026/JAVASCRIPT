@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table Without Loop</title>
+</head>
+<body>
+
+<h3>Enter Any Number to Print Table</h3>
+
+<input type="number" id="num" placeholder="Enter number">
+<button onclick="startTable()">Print Table</button>
+
+<script>
+function printTable(num, i) {
+    if (i > 10) return; // Stop when i reaches 10
+
+    let result = num * i;
+
+    // Print on webpage
+    document.write(num + " * " + i + " = " + result + "<br>");
+
+    // Print in console
+    console.log(num + " * " + i + " = " + result);
+
+    // Recursive call (No loop used)
+    printTable(num, i + 1);
+}
+
+function startTable() {
+    let number = Number(document.getElementById("num").value);
+
+    if (!number) {
+        alert("Please enter a valid number.");
+        return;
+    }
+
+    document.write("<h3>Multiplication Table of " + number + "</h3>");
+
+    printTable(number, 1);
+}
+</script>
+
+</body>
+</html>

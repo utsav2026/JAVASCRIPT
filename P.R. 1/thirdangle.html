@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third Angle of Triangle</title>
+</head>
+<body>
+
+    <h2>Find the Third Angle of a Triangle</h2>
+
+    <label>First Angle:</label>
+    <input type="number" id="angle1" placeholder="e.g., 65"><br><br>
+
+    <label>Second Angle:</label>
+    <input type="number" id="angle2" placeholder="e.g., 45"><br><br>
+
+    <button onclick="findThirdAngle()">Find Third Angle</button>
+
+<script>
+function findThirdAngle() {
+    let a1 = Number(document.getElementById("angle1").value);
+    let a2 = Number(document.getElementById("angle2").value);
+
+    if (a1 === 0 || a2 === 0) {
+        document.write("Please enter both angles.");
+        console.log("Please enter both angles.");
+        return;
+    }
+
+    let third = 180 - (a1 + a2);
+
+    // Print result on webpage
+    document.write("Third Angle: " + third);
+
+    // Print result in console
+    console.log("Third Angle: " + third);
+}
+</script>
+
+</body>
+</html>

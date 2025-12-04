@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap Two Numbers (Using document.write)</title>
+</head>
+<body>
+
+    <h2>Swap Two Numbers Without Third Variable (+ or - Not Allowed)</h2>
+
+    <label>Enter first number A:</label>
+    <input type="number" id="a" placeholder="e.g., 48"><br><br>
+
+    <label>Enter second number B:</label>
+    <input type="number" id="b" placeholder="e.g., 58"><br><br>
+
+    <button onclick="swapNumbers()">Swap</button>
+
+<script>
+function swapNumbers() {
+    let A = Number(document.getElementById("a").value);
+    let B = Number(document.getElementById("b").value);
+
+    if (document.getElementById("a").value === "" || document.getElementById("b").value === "") {
+        document.write("Please enter both values.");
+        return;
+    }
+
+    // Swap using loop + XOR
+    for (let i = 0; i < 1; i++) {  
+        A = A ^ B;
+        B = A ^ B;
+        A = A ^ B;
+    }
+
+    // Print output using document.write()
+    document.write("<h3>Swapped Values:</h3>");
+    document.write("A : " + A + "<br>");
+    document.write("B : " + B + "<br>");
+}
+</script>
+
+</body>
+</html>

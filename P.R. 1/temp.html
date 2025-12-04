@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Celsius to Fahrenheit Converter</title>
+</head>
+<body>
+
+    <h2>Convert Celsius to Fahrenheit</h2>
+
+    <label>Enter Temperature in Celsius:</label>
+    <input type="number" id="celsius" placeholder="e.g., 38">
+
+    <button onclick="convert()">Convert</button>
+
+<script>
+function convert() {
+    let c = document.getElementById("celsius").value;
+
+    if (c === "") {
+        document.writeln("Please enter a value.");
+        console.log("Please enter a value.");
+        return;
+    }
+
+    let f = (c * 9/5) + 32;
+
+    // Print on webpage (overwrites the page)
+    document.writeln("The temperature in Fahrenheit: " + f.toFixed(1));
+
+    // Print in console
+    console.log("The temperature in Fahrenheit: " + f.toFixed(1));
+}
+</script>
+
+</body>
+</html>
+

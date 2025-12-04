@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gross Salary Calculator</title>
+</head>
+<body>
+
+    <h2>Gross Salary Calculator</h2>
+
+    <label>Base Salary:</label>
+    <input type="number" id="base" placeholder="e.g., 100"><br><br>
+
+    <label>HRA (%):</label>
+    <input type="number" id="hra" placeholder="e.g., 10"><br><br>
+
+    <label>DA (%):</label>
+    <input type="number" id="da" placeholder="e.g., 5"><br><br>
+
+    <label>TA (%):</label>
+    <input type="number" id="ta" placeholder="e.g., 8"><br><br>
+
+    <button onclick="calculateSalary()">Calculate</button>
+
+<script>
+function calculateSalary() {
+    let base = Number(document.getElementById("base").value);
+    let hra = Number(document.getElementById("hra").value);
+    let da = Number(document.getElementById("da").value);
+    let ta = Number(document.getElementById("ta").value);
+
+    if (!base || !hra || !da || !ta) {
+        document.write("Please enter all values.");
+        console.log("Please enter all values.");
+        return;
+    }
+
+    let hraAmount = (base * hra) / 100;
+    let daAmount = (base * da) / 100;
+    let taAmount = (base * ta) / 100;
+
+    let gross = base + hraAmount + daAmount + taAmount;
+
+    // Output on new HTML using document.write()
+    document.write("<h2>Gross Salary: Rs. " + gross.toFixed(2) + "</h2>");
+
+    // Print result in console
+    console.log("Base Salary:", base);
+    console.log("HRA Amount:", hraAmount);
+    console.log("DA Amount:", daAmount);
+    console.log("TA Amount:", taAmount);
+    console.log("Gross Salary:", gross.toFixed(2));
+}
+</script>
+
+</body>
+</html>
