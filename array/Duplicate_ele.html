@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Duplicate Elements</title>
+</head>
+<body>
+
+    <h2>Find Duplicate Elements in an Array</h2>
+
+    <script>
+
+        let n = parseInt(prompt("Enter number of elements:"));
+
+        let arr = [];
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter element " + (i + 1) + ":"));
+        }
+
+        let duplicates = []; 
+
+        for (let i = 0; i < n; i++) {
+            for (let j = i + 1; j < n; j++) {
+                if (arr[i] === arr[j] && !duplicates.includes(arr[i])) {
+                    duplicates.push(arr[i]);
+                }
+            }
+        }
+
+        if (duplicates.length > 0) {
+            document.writeln("Duplicate elements in the array are: " + duplicates.join(", "));
+        } else {
+            document.writeln("No duplicate elements found in the array.");
+        }
+    </script>
+
+</body>
+</html>

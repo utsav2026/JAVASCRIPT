@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Element</title>
+</head>
+<body>
+
+    <h2>Largest Element in Array</h2>
+
+    <script>
+        let n = parseInt(prompt("Enter number of elements:"));
+        
+        let arr = [];
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter element " + (i + 1) + ":"));
+        }
+
+        let max = arr[0];
+
+        for (let i = 1; i < n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        document.writeln("The largest element in the array is: " + max);
+    </script>
+</body>
+</html>

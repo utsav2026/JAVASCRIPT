@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>First, Last, and Middle Elements</title>
+</head>
+
+<body>
+
+    <h2>Print First, Last, and Middle Elements of an Array</h2>
+
+    <script>
+        let n = parseInt(prompt("Enter number of elements:"));
+
+        let arr = [];
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt("Enter element " + (i + 1) + ":");
+        }
+
+        let first = arr[0];
+
+        let last = arr[n - 1];
+
+        let middle;
+        if (n % 2 === 0) {
+
+            middle = arr[(n / 2) - 1] + " and " + arr[n / 2];
+        } else {
+
+            middle = arr[Math.floor(n / 2)];
+        }
+
+        document.writeln("First element: " + first + "<br>");
+        document.writeln("Middle element(s): " + middle + "<br>");
+        document.writeln("Last element: " + last);
+    </script>
+
+</body>
+
+</html>

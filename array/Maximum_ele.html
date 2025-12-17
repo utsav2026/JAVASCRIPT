@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maximum Element</title>
+</head>
+<body>
+
+    <h2>Find Maximum Element</h2>
+
+    <script>
+        let n = parseInt(prompt("Enter number of elements:"));
+
+        let arr = [];
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter element " + (i + 1) + ":"));
+        }
+        
+        let max = arr[0];
+
+        for (let i = 1; i < n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        document.writeln("Maximum element in the array is: " + max);
+    </script>
+
+</body>
+</html>

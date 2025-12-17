@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Negative Elements Program</title>
+</head>
+
+<body>
+
+    <h2>Find Negative Elements</h2>
+
+    <script>
+
+        let size = parseInt(prompt("Enter how many numbers you want in the array:"));
+
+        let numbers = [];
+
+        for (let i = 0; i < size; i++) {
+            numbers[i] = parseInt(prompt("Enter number " + (i + 1) + ":"));
+        }
+
+        document.writeln("Negative elements in the array are:<br>");
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                document.writeln(numbers[i] + "<br>");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

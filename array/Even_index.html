@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sum of Elements at Even Indexes</title>
+</head>
+
+<body>
+
+    <h2>Sum of Elements at Even Indexes in an Array</h2>
+
+    <script>
+        let n = parseInt(prompt("Enter number of elements:"));
+
+        let arr = [];
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter element " + (i + 1) + ":"));
+        }
+
+        let sum = 0;
+
+        for (let i = 0; i < n; i += 2) {
+            sum += arr[i];
+        }
+
+        document.writeln("Sum of elements at even indexes is: " + sum);
+    </script>
+
+</body>
+
+</html>
