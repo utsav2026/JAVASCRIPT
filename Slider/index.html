@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Auto Slider</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .slider {
+      width: 90%;
+      max-width: 900px;
+      height: 380px;
+      overflow: hidden;
+      border-radius: 18px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+    }
+
+    .slides {
+      display: flex;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      color: #fff;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      max-width: 520px;
+    }
+
+    .slide h1 {
+      font-size: 42px;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .slide p {
+      font-size: 18px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* Local images */
+    .slide.one {
+      background-image: url(images/image\ 1.jpg);
+    }
+
+    .slide.two {
+       background-image: url(images/image\ 2.jpg);
+    }
+
+    .slide.three {
+       background-image: url(images/image\ 3.jpg);
+    }
+
+    @media (max-width: 768px) {
+      .slide h1 {
+        font-size: 30px;
+      }
+
+      .slide p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+
+      <div class="slide one">
+        <div class="slide-content">
+          <h1>Computer Technology</h1>
+          <p>
+            Modern hardware and intelligent software working together.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide two">
+        <div class="slide-content">
+          <h1>Software Development</h1>
+          <p>
+            Clean code, scalable systems, and reliable applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide three">
+        <div class="slide-content">
+          <h1>Future Innovation</h1>
+          <p>
+            Technology shaping the next generation of digital solutions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    var slider = document.getElementById("slides");
+    var slideCount = slider.children.length;
+    var currentSlide = 0;
+
+    function moveSlider() {
+      currentSlide = currentSlide + 1;
+
+      if (currentSlide >= slideCount) {
+        currentSlide = 0;
+      }
+
+      slider.style.transform = "translateX(-" + (currentSlide * 100) + "%)";
+    }
+
+    setInterval(function () {
+      moveSlider();
+    }, 3500);
+  </script>
+
+</body>
+</html>
