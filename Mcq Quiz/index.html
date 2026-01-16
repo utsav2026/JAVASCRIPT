@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Online MCQ Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="exam-wrapper">
+
+    <div class="exam-header">
+      <h1>JavaScript Online Test</h1>
+      <div class="exam-info">
+        <p>Total Questions: 10 | 1 Mark Each</p>
+        <p class="timer">⏱ Time Left: <span id="time">10:00</span></p>
+      </div>
+    </div>
+
+    <div class="quiz-card" id="quiz-box">
+
+      <div class="question-section">
+        <span id="question-number">Question 1 of 10</span>
+        <h2 id="question">Question text</h2>
+      </div>
+
+      <div class="options">
+        <label class="option">
+          <input type="radio" name="answer" id="a" class="answer">
+          <span id="a_text"></span>
+        </label>
+
+        <label class="option">
+          <input type="radio" name="answer" id="b" class="answer">
+          <span id="b_text"></span>
+        </label>
+
+        <label class="option">
+          <input type="radio" name="answer" id="c" class="answer">
+          <span id="c_text"></span>
+        </label>
+
+        <label class="option">
+          <input type="radio" name="answer" id="d" class="answer">
+          <span id="d_text"></span>
+        </label>
+      </div>
+
+      <button id="submit">Next Question</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
